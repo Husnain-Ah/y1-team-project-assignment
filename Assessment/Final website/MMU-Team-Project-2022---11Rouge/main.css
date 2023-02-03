@@ -1,0 +1,70 @@
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+
+    background-color: rgb(230,230,230);
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+}
+.content {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    flex-shrink: 0;
+    
+    margin: auto;
+    width: 100%;
+    height: 50px;
+
+    background-color: black;
+}
+
+.footer .text {
+    font-family: 'Chivo', sans-serif;
+    color: white;
+}
+
+.footer .social {
+    height: calc(100% - 20px);
+    aspect-ratio: 1;
+}
+.footer .social a path {
+    fill: white;
+    transition: fill 0.25s;
+}
+.footer .social a path:hover {
+    cursor: pointer;
+    fill: #ff9900;
+}
+
+.footer .teamname {
+    margin: 0;
+    padding-right: 30px;
+}
+.footer .scrolltop {
+    padding-left: 30px;
+    transition: color 0.25s;
+}
+
+.footer .scrolltop:hover {
+    cursor: pointer;
+    color: #ff9900;
+}
+
+@media (max-width: 600px) {
+    .footer .scrolltop {
+        display: none;
+    }
+} 

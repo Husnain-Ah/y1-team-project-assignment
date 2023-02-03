@@ -1,0 +1,68 @@
+.topnav {
+    position: fixed;
+    width: 100%;
+
+    z-index: 100;
+}
+.topnav .across {
+    display: flex;
+    margin-top: 10px;
+}
+.topnav .across .teamname {
+    margin: 0;
+    margin-left: 10px;
+}
+.topnav .across .teamname p{
+    margin: 0;
+
+    font-family: 'Chivo', sans-serif;
+    font-size: 3rem;
+    color: #ff9900;
+    background-color: black;
+    border-radius: 1vh;
+}
+.topnav .across .links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+.topnav .across .links .navlink {
+    margin: 0;
+    margin-right: 10px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    font-family: 'Chivo', sans-serif;
+    text-decoration: none;
+    color: white;
+
+    background-color: black;
+    border-radius: 1vh;
+
+    font-size: 2rem;
+}
+@media (max-width: 1450px) {
+    .topnav .across .links {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .topnav .across .links .navlink {
+        margin-bottom: 10px;
+    }
+} 
+
+.topnav .darken {
+    width: 100%;
+    height: 100px;
+    margin-bottom: -100px;
+
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0));
+}
+@media (max-width: 1450px) {
+    .topnav .darken {
+        height: 325px;
+        margin-bottom: -325px;
+    }
+}

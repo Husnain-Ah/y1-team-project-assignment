@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="navlinks.css">
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+    <div class="content">
+
+        <script id="replace_navigation" src="components/navlinks.js"></script>
+
+        <!--this needs to be on one line so the childNodes list doesn't get filled up with innerHTML references-->
+        <div class="topimg">
+            <div class="clip"><img src="images/homepage.jpg"></div>
+        </div>
+
+        <script>
+            //i wrote this script to make the background image of the library blur and
+            //scroll up faster than the rest of the page for a nice effect
+
+            const m = 0.5;
+            const n = 600;
+            const b = 0.02;
+
+            var e1 = document.getElementsByClassName("topimg")[0];
+            var e2 = e1.childNodes[0];
+            var e3 = e2.childNodes[0];
+
+            var scrollPos = 0;
+
+            function UpdateImg() {
+                const s = Math.min(scrollPos, n);
+                const t = m * 2 * s * (1 - s / (2 * n)); //solved difeq: f'[s] == 1-(s/n)
+                e2.style.transform = "translateY(-" + t + "px)";
+                e3.style.filter = "blur(" + b * t + "px)";
+            }
+            document.addEventListener("scroll", function(e) {
+                scrollPos = window.scrollY;
+                UpdateImg();
+            });
+            UpdateImg();
+        </script>
+
+        <h1 class="maintitle">
+            <span style="color: #ff9900">11Rouge</span> Team Project
+        </h1>
+
+        <div class="holder">
+            <div class="box">
+                <h2 class="sheader">Website purpose</h2>
+                <p>
+                    The aim of the website is to provide information in a clear and accessible format for students and people seeking for higher education and promoting the best user experience possible for them. The content of website provides important fact and figures,
+                    and it shows realistic and honest experience of the university. This will let the visitors of the website understand how the university is going to look like and should help them to make decisions of joining Manchester Metropolitan
+                    University.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script id="replace_footer" src="components/footer.js"></script>
+</body>
+
+</html>

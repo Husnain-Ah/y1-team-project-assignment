@@ -1,0 +1,71 @@
+.content .topimg {
+    position: absolute;
+    z-index: -1;
+    height: 25vh;
+    overflow: hidden;
+}
+
+.content .topimg img {
+    width: 100%;
+    filter: blur(4px);
+}
+
+@media (max-width: 1450px) {
+    .content .topimg {
+        height: 35vh;
+    }
+}
+
+.content .pagetitle {
+    margin: 0;
+    margin-top: 22vh;
+    margin-left: 5vw;
+    font-family: 'Chivo', sans-serif;
+    color: white;
+    background-color: black;
+    border-radius: 1.5vh 0px 0px 1.5vh;
+    font-size: 3rem;
+}
+
+@media (max-width: 1450px) {
+    .content .pagetitle {
+        margin-top: 32vh;
+    }
+}
+
+.content .pagetitle.nomargin {
+    margin-top: 0px;
+}
+
+.content .holder {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+}
+
+.content .holder .box {
+    margin-bottom: 1.5vh;
+    padding: 3vh;
+    width: 80vw;
+    background-color: white;
+    border-radius: 2.5vh;
+}
+
+.content .holder .box h2 {
+    margin: 0;
+    margin-top: 1.5vh;
+    font-family: 'Chivo', sans-serif;
+    font-size: 2rem;
+    color: rgb(25, 25, 25);
+}
+
+.content .holder .box h2.nomargin {
+    margin-top: 0;
+}
+
+.content .holder .box p {
+    margin: 0;
+    font-family: 'Chivo', sans-serif;
+    font-size: 1.2rem;
+    color: rgb(25, 25, 25);
+}
